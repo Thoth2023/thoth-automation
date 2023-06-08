@@ -44,19 +44,10 @@ public class CommonSteps {
         driver.navigate().to(Property.get("Url"));
     }
     
-    @When("the user create his project")
-    public synchronized static void userCreatesProject() {
-    	clickOn("HomeScreen.btnCreateNewProject");
-    	putIn("Novo Projeto Automatizado", "HomeScreen.txtTitle");
-    	putIn("Automação de novo Projeto", "HomeScreen.txtDescription");
-    	putIn("Automação de novo Projeto", "HomeScreen.txtObjectives");
-    	clickOn("HomeScreen.btnCreateProject");
-    }
-    
     @When("the user adds his credentials")
     public synchronized static void userAuthenticates() {
-    	typeCredentials(Property.get("User"), "LoginPage.txtEmail");
-    	typeCredentials(Property.get("Password"), "LoginPage.txtPassword");
+    	typeCredentials(Property.get("User"), "SignIn.inpEmail");
+    	typeCredentials(Property.get("Password"), "SignIn.inpPassword");
     }
     
     @And("^the user puts \"(.*)?\" on \"(.*)?\"$")
@@ -75,9 +66,9 @@ public class CommonSteps {
             System.exit(0);
         }
     }
-    
+ 
     @And("the user select \"(.*)?\" on \"(.*)?\"$")
-    public synchronized static void select(String text, String element) {
+    public synchronized static void selectVisibleText(String text, String element) {
     	(new Select(driver.findElement(By.xpath(Repository.getXPath(element))))).selectByVisibleText(text);
     }
     
@@ -104,11 +95,6 @@ public class CommonSteps {
     @And("^the user types \"(.*)?\" on \"(.*)?\"$")
     public synchronized static void putIn(String text, String element) {
         driver.findElement(By.xpath(Repository.getXPath(element))).clear();
-        try {
-        	Thread.sleep(100);
-        }catch (Exception e) {
-			
-		}
         driver.findElement(By.xpath(Repository.getXPath(element))).sendKeys(text);
     }
     

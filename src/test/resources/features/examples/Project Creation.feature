@@ -1,4 +1,3 @@
-@UC2
 Feature: Project Creation
 
   @AUT02

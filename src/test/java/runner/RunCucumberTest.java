@@ -16,7 +16,7 @@ import java.io.IOException;
         plugin = {"pretty"},
         features = "src/test/resources/features/",
         glue = "steps",
-        tags = "@UC2"
+        tags = "@UC"
 )
 public class RunCucumberTest {
     @BeforeClass
