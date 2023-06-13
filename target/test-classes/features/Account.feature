@@ -1,4 +1,4 @@
-@UC
+@UC1
 Feature: Create acount and login
 
   @AUT01

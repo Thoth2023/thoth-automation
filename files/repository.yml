@@ -2,8 +2,9 @@ NavBar:
   navImageThoth: "/html/body/div[1]/div/div/nav/div/a"
   navHome: "//*[@id='navigation']/ul/li[1]/a"
   navAbout: "//*[@id='navigation']/ul/li[2]/a"
-  navSignUp: "//*[@id='navigation']/ul/li[3]/a"
-  navSingIn: "//*[@id='navigation']/ul/li[4]/a"
+  navHelp: "//*[@id='navigation']/ul/li[3]/a"
+  navSignUp: "//*[@id='navigation']/ul/li[4]/a"
+  navSingIn: "//*[@id='navigation']/ul/li[5]/a"
   
 SideBar:
   dashboard: "//*[@id='sidenav-collapse-main']/ul/li[1]/a"
@@ -55,7 +56,7 @@ Project:
   txtStatus: "/html/body/main/div[1]/div/div/div/div/div[2]/div/table/tbody/tr[1]/td[3]/span"
   btnView: "/html/body/main/div[1]/div/div/div/div/div[2]/div/table/tbody/tr[1]/td[5]/a[1]"
   btnEdit: "/html/body/main/div[1]/div/div/div/div/div[2]/div/table/tbody/tr[1]/td[5]/a[2]"
-  btnDeleate: "/html/body/main/div[1]/div/div/div/div/div[2]/div/table/tbody/tr[1]/td[5]/a[3]"
+  btnDelete: "/html/body/main/div[1]/div/div/div/div/div[2]/div/table/tbody/tr[1]/td[5]/a[3]"
   btnAddMember: "/html/body/main/div[1]/div/div/div/div/div[2]/div/table/tbody/tr[1]/td[6]/a"
   
 NewProject:
