@@ -43,7 +43,14 @@ public class CommonSteps {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         driver.navigate().to(Property.get("Url"));
     }
-    
+    @When("the user create his project")
+    public synchronized static void userCreatesProjects() {
+    	clickOn("Project.btnNewProject");
+    	typeCredentials("Novo Projeto Automatizado", "NewProject.inpTitle");
+    	typeCredentials("Automação de novo Projeto", "NewProject.inpDescription");
+    	typeCredentials("Demonstrar automação de testes", "NewProject.inpObjectives");
+    	clickOn("NewProject.btnCreate");
+    }
     @When("the user adds his credentials")
     public synchronized static void userAuthenticates() {
     	typeCredentials(Property.get("User"), "SignIn.inpEmail");
